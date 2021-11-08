@@ -129,7 +129,7 @@ body {
     margin: 0;
 }
 .header .image {
-    background-image: url(/banner.jpg);
+    background-image: url(banner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
