@@ -7,23 +7,39 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="awesome/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
     <body>
+        <input id="button" type="checkbox">
         <!-- Navbar -->
         <div class="navbar-fixed">
             <div class="navbar-relative">
-                <i class="fa fa-code"></i>
+                <i class="fad fa-code"></i>
                 <a href="#">Agung Kurniawan</a>
+
+                <!-- navbar adaptive -->
                 <div class="navbar-absolute">
                     <a href="index.html">Home</a>
-                    <a href="index.html#service">Service</a>
-                    <a href="index.html#project">Project</a>
+                    <a href="#profile">Profile</a>
+                    <a href="#skill">Skill</a>
                     <a href="#contact">Contact</a>
                     <a href="#about">About</a>
                 </div>
-                
+
+                <!-- button list -->
+                <div class="button-list">
+                    <label for="button" class="fa fa-bars"></label>
+                </div>
             </div>
+        </div>
+
+
+        <!-- navbar responsive -->
+        <div class="navbar-responsive">
+            <a href="index.html">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#skill">Skill</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
         </div>
 
         
@@ -36,7 +52,7 @@
             <img src="halsey.png" alt="profile">
 
             <div class="about-info">
-                <div class="profile">
+                <div class="profile" id="profile">
                     <h2>Profile</h2>
                     <div class="garis">
 
@@ -69,7 +85,7 @@
                 </div>
 
 
-                <div class="skill">
+                <div class="skill" id="skill">
                     <h2>Skill</h2>
                     <div class="garis">
 

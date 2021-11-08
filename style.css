@@ -58,6 +58,52 @@ body {
 
 
 
+.button-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    display: none;
+}
+.button-list label {
+    color:crimson;
+    padding: 22px 19px;
+    font-size: 26px;
+    font-weight: 500;
+    cursor:pointer;
+}
+.button-list label:hover {
+    color: firebrick;
+}
+
+
+
+
+#button {
+    display: none;
+}
+.navbar-responsive {
+    position: fixed;
+    width: 100%;
+    background-color:white;
+    display: none;
+}
+.navbar-responsive a {
+    color: crimson;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 7%;
+    text-decoration: none;
+}
+.navbar-responsive a:hover {
+    color: white;
+    background-color: crimson;
+}
+
+
+
 
 .header {
     width: 84%;
@@ -83,7 +129,7 @@ body {
     margin: 0;
 }
 .header .image {
-    background-image: url(banner.jpg);
+    background-image: url(/banner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -437,6 +483,12 @@ body {
     }
     .navbar-absolute {
         display: none;
+    }
+    #button:checked ~ .navbar-responsive {
+        display: block;
+    }
+    .button-list {
+        display: block;
     }
     .header {
         width: 84%;
