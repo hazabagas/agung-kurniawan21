@@ -7,6 +7,9 @@ body {
     color: grey;
     margin: 0;
 }
+p {
+    line-height: 1.5em;
+}
 
 .navbar-fixed {
     position: fixed;
@@ -85,6 +88,7 @@ body {
 .navbar-responsive {
     position: fixed;
     width: 100%;
+    margin-top: 53px;
     background-color:white;
     display: none;
 }
@@ -104,11 +108,13 @@ body {
 
 
 
-
+.header-main {
+    width: 100%;
+}
 .header {
     width: 84%;
     height: 470px;
-    margin: 73px auto 0 auto;
+    margin: 53px auto 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
     box-sizing: border-box;
@@ -129,7 +135,7 @@ body {
     margin: 0;
 }
 .header .image {
-    background-image: url(banner.jpg);
+    background-image: url(/banner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -201,7 +207,9 @@ body {
 
 
 
-
+.project-main {
+    width: 100%;
+}
 .project {
     width: 84%;
     margin: 0 auto;
@@ -316,10 +324,12 @@ body {
 
 
 
-
+.about-main {
+    width: 100%;
+}
 .about {
     width: 84%;
-    margin: 73px auto 0 auto;
+    margin: 53px auto 0 auto;
     padding: 50px 0;
     box-sizing: border-box;
 }
@@ -473,6 +483,252 @@ body {
 
 
 
+/* light and dark */
+input[type="checkbox"]#light-dark .change {
+    display: none;
+}
+
+.light-dark {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    background-color: #343c46;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.light-dark i {
+    font-size: 28px;
+    padding: 8px;
+    color: gold;
+    text-align: center;
+}
+.light-dark .light-dark-button {
+    background-color: #E4E6EB;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .light-dark {
+    background-color: #E4E6EB;
+    /* transition: all 1s ease-in-out; */
+}
+input[type="checkbox"]#light-dark.change:checked ~ .light-dark .light-dark-button {
+    background-color: #343c46;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transition: all 1s ease-in-out; */
+
+}
+
+
+
+
+/* Body light-dark */
+input[type="checkbox"]#light-dark.change:checked  body {
+    background-color: #343c46;
+    transition: all 1s ease-in-out;
+}
+
+
+
+
+/* Navbar light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-fixed {
+    background-color:#343c46;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-fixed .navbar-relative i {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-fixed .navbar-relative a {
+    color:#E4E6EB;
+}
+
+
+
+/* Header light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .header-main {
+    background-color:#343c46;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .header-main .header .title h1, h2 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .header-main .header .title h2 {
+    color:#E4E6EB;
+}
+
+
+
+/* Service light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .service {
+    background-color:#343c46;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .service h2 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .service .garis {
+    border-top: 2px solid #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .service .info {
+    background-color:#2a4858;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .service .info i {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .service .info h3 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .service .info p {
+    color:#E4E6EB;
+}
+
+
+
+
+
+/* Project light-dark  */
+input[type="checkbox"]#light-dark.change:checked ~ .project-main {
+    background-color:#343c46;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .project-main .project h1 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .project-main .project h2 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .project-main .project .garis {
+    border-top: 2px solid #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .project-main .project p {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .project-main .project a {
+    color:#E4E6EB;
+    border: 1px solid #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .project-main .project a:hover {
+    color:#343c46;
+    background-color: #E4E6EB;
+}
+
+
+
+
+/* Footer light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .footer {
+    background-color:#343c46;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .footer h4 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .footer a {
+    color:#E4E6EB;
+}
+
+
+
+
+
+/* Button list light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-fixed .navbar-relative .button-list .fa.fa-bars {
+    color:#E4E6EB;
+}
+
+/* Navbar responsive light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-responsive {
+    background-color:#343c46;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-responsive a {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .navbar-responsive a:hover {
+    color:#343c46;
+    background-color: #E4E6EB;
+}
+
+
+
+
+
+/* About light-dark */
+input[type="checkbox"]#light-dark.change:checked ~ .about-main {
+    background-color:#343c46;
+    transition: all 1s ease-in-out;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about h1 {
+    color:#E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .garis {
+    border-top: 2px solid #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about img {
+    border: 2px solid #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about img:hover {
+    background-color: #E4E6EB;
+}
+
+
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .profile h2 {
+    color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .profile .profile-info p {
+    color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .profile .profile-info .bio h5 {
+    color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .profile .profile-info .bio h5:nth-child(odd) {
+    font-weight: 500;
+}
+
+
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill h2 {
+    color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .skill-info h4 {
+    color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .bar .rate.html {
+    background-color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .bar .rate.css {
+    background-color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .bar .rate.rate.javascript {
+    background-color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .bar .rate.mysql {
+    background-color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .bar .rate.php {
+    background-color: #E4E6EB;
+}
+input[type="checkbox"]#light-dark.change:checked ~ .about-main .about .about-info .skill .bar .rate.java {
+    background-color: #E4E6EB;
+}
+
+
+
+
+
+
 
 
 
@@ -494,7 +750,7 @@ body {
         width: 84%;
         height: 650px;
         display: grid;
-        margin: 73px auto 0 auto;
+        margin: 53px auto 0 auto;
         grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
 	}
