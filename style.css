@@ -97,7 +97,6 @@ label:active {
     margin-top: 50px;
     background-color:white;
     display: none;
-    overflow:auto;
 }
 .navbar-responsive a {
     color: crimson;
